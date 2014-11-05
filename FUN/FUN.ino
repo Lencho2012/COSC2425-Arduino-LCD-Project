@@ -1,3 +1,9 @@
+/**
+
+Swaps the background color based on button presses
+
+*/
+
 #include <ColorLCDShield.h>
 
 LCDShield lcd;
@@ -24,12 +30,12 @@ void loop()
 
 void VAMP()// Removing the not from digitalRead if's will create a pretty cool wipe screen between the two colors
 {
-    if(!digitalRead(buttonPins[0]))
+    if(!digitalRead(buttonPins[0])) // S1 button
     {
       lcd.clear(EMERALD);
     }
       
-     if(!digitalRead(buttonPins[2]))
+     if(!digitalRead(buttonPins[2])) // S3 button
      {
        lcd.clear(BLACK);
      }
