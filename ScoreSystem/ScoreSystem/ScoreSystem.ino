@@ -18,14 +18,13 @@ void setup()
         digitalWrite(buttonPins[i], HIGH);
     }
     
-    char blob = score;
-    //char *bloob = blob ; 
-    
-    //char *xScore = xString + 'X';  
-  
+    char blob = score;  
     lcd.setRect(2, 25, 20, 110, 0, BLACK);
-    lcd.setChar(blob, 2, 30, BLACK, WHITE); 
-    //lcd.setStr(
+
+    // Find score integer and print as char*
+    //switch case
+    
+
     
 }
 
@@ -37,11 +36,5 @@ void loop()
     }*/
   
 }
-
-/*void moveWaldo()
-{
-    
-}
-*/
 
 
