@@ -11,6 +11,7 @@ void setup()
 {  
   /* Initialize the LCD, set the contrast, clear the screen */
   lcd.init(EPSON);
+  lcd.clear(GREEN);
   for(int i =0; i <60 ; i++)
   {
      lcd.contrast(-40 + i);
@@ -18,7 +19,6 @@ void setup()
      delay(500);
      
   }
-  lcd.clear(GREEN);
   
 }
 
