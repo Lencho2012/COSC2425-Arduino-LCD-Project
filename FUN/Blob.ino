@@ -4,6 +4,7 @@
 
 LCDSheild lcd;
 //int num = 0;
+//int gone = 0; hit 130 and reset to 0; setRect again
 void setup()
 {
     lcd.init(EPSON);
@@ -16,7 +17,7 @@ void loop()
   
 }
 
-void bolts()
+void makeBlobs()
 {
 /*
 	srand(time(NULL));
