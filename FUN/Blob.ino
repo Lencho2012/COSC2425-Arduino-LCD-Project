@@ -28,5 +28,5 @@ void makeBlobs()
 	for(int i = 1; i < 6; i++)
 	{
 		lcd.setRect(i * 5, yPos, i * 25, yPos + 20, 1, BLACK);
-    }
+	}
 }
