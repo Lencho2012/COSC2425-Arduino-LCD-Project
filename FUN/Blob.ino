@@ -3,13 +3,13 @@
 #include <time.h>
 
 LCDSheild lcd;
-//int num = 0;
-//int gone = 0; hit 130 and reset to 0; setRect again
+int yPos = 0;
+
 void setup()
 {
-    lcd.init(EPSON);
-    lcd.contrast(-30);
-    lcd.clear(BLACK);
+ 	lcd.init(EPSON);
+	lcd.contrast(-30);
+	lcd.clear(BLACK);
 }
 
 void loop()
@@ -19,14 +19,14 @@ void loop()
 
 void makeBlobs()
 {
-/*
 	srand(time(NULL));
 	
-	num = rand() % 106; // Add 4 when setRect to avoid first 2 pixels on y axis
-	printf("%d\n", num);
-*/
+	yPos = rand() % 102 + 5; // Add 4 when setRect to avoid first 2 pixels, Random numbers between 1 and 102
+				// + 5 avoids first few pixels, no Blobs should reach over the 128thpixel
+				// Blobs are 20x20 pixels, 
 
-    srand(time(NULL));
-    lcd.setRect(10, 50, 30, 70, 1, BLACK);
-    
+	for(int i = 1; i < 6; i++)
+	{
+		lcd.setRect(i * 5, yPos, i * 25, yPos + 20, 1, BLACK);
+    }
 }
