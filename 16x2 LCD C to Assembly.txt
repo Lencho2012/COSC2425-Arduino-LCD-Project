@@ -1,0 +1,22 @@
+//Making a 16x2 LCD for Arduino UNO work with Assembly Language by referencing Arduino Libraries. 
+
+
+LiquidCrystal::LiquidCrystal(uint8_t rs,  uint8_t enable, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3)
+{
+  init(1, rs, 255, enable, d0, d1, d2, d3, 0, 0, 0, 0);
+}
+
+//C code for simple 'Hello World' display on LCD
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);  //From Arduino to LCD pins - Register Select, Enable, D4, D5, D6. D7  
+
+void setup() {
+  lcd.begin(16, 2);
+  lcd.print("hello, world!");
+}
+
+void loop() {
+  lcd.setCursor(0, 1);
+  lcd.print(millis()/1000);
+}
